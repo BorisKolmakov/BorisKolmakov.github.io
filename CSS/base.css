@@ -68,6 +68,131 @@ bottom: 86.23%;
 .header__menu-profile-link {
   display: none;
 }
+.header__menu-divider-right {
+  width: 2px;
+  height: 32px;
+  margin-left: 20px;
+  background: #EAEAEA;
+  border-radius: 1px;
+}
+
+.header__menu-repair{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FF3E79;
+  border-radius: 20px;
+}
+
+.header__menu-repair-link {
+  margin-left: 20px; 
+}
+
+.header__menu-checkstatus {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FF3E79;
+  border-radius: 20px;
+}
+
+.header__menu-checkstatus-link {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.service {
+  padding-top: 24px;
+  padding-left: 16px;
+  background-color: #F8F8F8;
+}
+
+.service__container-repair-link{
+  display: none;
+}
+
+.service__container-checkstatus-link{
+  display: none;
+}
+.service__menu-item {
+min-width: 304px;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+flex-wrap: wrap;
+}
+
+.service__menu-item-text {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  width: 304px;
+}
+
+.service__menu-item-text-info {
+  overflow-y: hidden;
+  min-width: 288px;
+  max-width: 490px;
+  margin-bottom: 16px;
+  height: 155px;
+ }
+
+ .service__menu-item-text-info-checker {
+  opacity: 0;
+  position: absolute;
+ }
+
+ .service__menu-item-text-info-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  color:  #1B1C21;
+ }
+
+ .service__menu-item-text-info-checker ~ .service__menu-item-text-info-button::after {
+   content: "Читать далее";
+ }
+
+ .service__menu-item-text-info-checker:checked ~ .service__menu-item-text-info-button::after {
+  content: "Скрыть";
+}
+
+.service__menu-item-text-info-checker:checked ~ .service__menu-item-text-info {
+  height: 100%;
+}
+
+.service__menu-item-text-info-checker:checked ~ .service__menu-item {
+  max-height: auto;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.service__menu-item-image {
+  width: 320px;
+  margin-left: -16px
+}
+
+.service__menu-item-more-link {
+    margin-left: 32px;
+    text-decoration: none;
+    font-weight: 400;
+    color:#1B1C21;
+}
+
+.service__menu-item-text-info-checker ~ .service__menu-item-text-info-button::before {
+  content: url(../SVG/icon-more.svg);
+  padding-right: 16px;
+}
+
+.service__menu-item-text-info-checker:checked ~ .service__menu-item-text-info-button::before {
+  content: url(../SVG/icon-more-rev.svg);
+  padding-right: 16px;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -133,57 +258,6 @@ bottom: 86.23%;
 .header__menu-divider-right {
   margin-left: 16px;
 }
-}
-
-.header__menu-divider-right {
-  width: 2px;
-  height: 32px;
-  margin-left: 20px;
-  background: #EAEAEA;
-  border-radius: 1px;
-}
-
-.header__menu-repair{
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FF3E79;
-  border-radius: 20px;
-}
-
-.header__menu-repair-link {
-  margin-left: 20px; 
-}
-
-.header__menu-checkstatus {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FF3E79;
-  border-radius: 20px;
-}
-
-.header__menu-checkstatus-link {
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-.service {
-  padding-top: 24px;
-  padding-left: 16px;
-  background-color: #F8F8F8;
-}
-
-.service__container-repair-link{
-  display: none;
-}
-
-.service__container-checkstatus-link{
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -346,52 +420,4 @@ width: 531px;
 height: 307px;
 margin:0;
 }
-}
-
-.service__menu-item {
-min-width: 304px;
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-flex-wrap: wrap;
-}
-
-.service__menu-item-text {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.2px;
-  text-align: left;
-  width: 304px;
-  height: 160px;
-}
-
-.service__menu-item-text-info {
-  overflow-y: auto;
-  height: 70%;
-  min-width: 288px;
-  max-width: 490px;
-  margin-bottom: 16px;
- }
-
- .service__menu-item-text-info::-webkit-scrollbar {
-  width: 0;
- }
-
-.service__menu-item-image {
-  min-width: 312px;
-  max-width: 531px;
-  margin-left: -16px
-}
-
-.service__menu-item-more-link {
-    margin-left: 32px;
-    text-decoration: none;
-    font-weight: 400;
-    color:#1B1C21;
-}
-
-.service__menu-item-more-link::before {
-  content: url(../SVG/icon-more.svg);
-  padding-right: 16px;
-  margin-left: -20px;
 }
