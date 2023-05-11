@@ -5,33 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="./CSS/base.css">
   <title>maket</title>
 </head>
 <body>
   <div class="wrapper">
   <header class="header">
-    <button type="button" class="header__burger">
+    <button type="button" class="header__burger icon__back">
       <img src="./SVG/icon_burger.svg" alt="Логотип бургер">
     </button>
     <a class="header__logo"><img src="./SVG/Group.svg" alt="Логотип компании CPS"></a>
     <ul class="header__actions">
-        <li><button type="button" class="header__call"><img src="./SVG/icon-call.svg" alt="Логотип кнопки звонок"></button></li>
-        <li><button type="button" class="header__chat"><img src="./SVG/icon-chat.svg" alt="Логотп кнопки Обратная связь"></button></li>
-        <li><button type="button" class="header__profile"><img src="./SVG/icon-profile.svg" alt="Логотип кнопки Личный кабинет"></button></li>
+        <li><button type="button" class="header__call icon__back"><img src="./SVG/icon-call.svg" alt="Логотип кнопки звонок"></button></li>
+        <li><button type="button" class="header__chat icon__back"><img src="./SVG/icon-chat.svg" alt="Логотп кнопки Обратная связь"></button></li>
+        <li><button type="button" class="header__profile icon__back"><img src="./SVG/icon-profile.svg" alt="Логотип кнопки Личный кабинет"></button></li>
         <li><div class="header__divider"></div></li>
-        <li><button type="button" class="header__repair"><img src="./SVG/icon-repair.svg" alt="Логотип кнопки заказа ремнота"></button></li>
-        <li><button type="button" class="header__checkstatus"><img src="./SVG/icon-checkstatus.svg" alt="Логотип кнопки Статус ремонта"></button></li>
+        <li><button type="button" class="header__repair icon__back"><img src="./SVG/icon-repair.svg" alt="Логотип кнопки заказа ремнота"></button></li>
+        <li><button type="button" class="header__checkstatus icon__back"><img src="./SVG/icon-checkstatus.svg" alt="Логотип кнопки Статус ремонта"></button></li>
     </ul>
   </header>
+  <div class="navigation__wrapper">
+    <div class="navigation__overlay"></div>
+  <div class="navigation">
+    <header class="navigation__header">
+      <button type="button" class="navigation__burger open icon__back">
+        <img src="./SVG/icon-close.svg" alt="Логотип бургер">
+      </button>
+      <a class="navigation__logo"><img src="./SVG/Group.svg" alt="Логотип компании CPS"></a>
+      <button type="button" class="navigation__search icon__back">
+        <img src="./SVG/icon-search.svg" alt="Логотип бургер">
+      </button>
+    </header>
+    <section class="navigation__body">
+      <ul class="navigation__list">
+        <li><a href="" class="navigation__link">Ремонт техники</a></li>
+        <li><a href="" class="navigation__link navigation__link--active">Услуги и сервисы</a></li>
+        <li><a href="" class="navigation__link">Корпоративным клиентам</a></li>
+        <li><a href="" class="navigation__link">Продавцам техники</a></li>
+        <li><a href="" class="navigation__link">Партнерам</a></li>
+        <li><a href="" class="navigation__link">Производителям</a></li>
+        <li><a href="" class="navigation__link">Наши сервисные центры</a></li>
+        <li><a href="" class="navigation__link">Контакты</a></li>
+      </ul>
+      <section class="navigation__info">
+        <ul class="navigation__actions">
+          <li><button type="button" class="navigation__call icon__back"><img src="./SVG/icon-call.svg" alt="Логотип кнопки звонок"></button></li>
+        <li><button type="button" class="navigation__chat icon__back"><img src="./SVG/icon-chat.svg" alt="Логотп кнопки Обратная связь"></button></li>
+        <li><button type="button" class="navigation__profile icon__back"><img src="./SVG/icon-profile.svg" alt="Логотип кнопки Личный кабинет"></button></li>
+        </ul>
+        <ul class="navigation__contacts">
+          <li class="navigation__mail">mail@cps.com</li>
+          <li class="navigation__phone-number">8 800 890 8900</li>
+        </ul>
+        <ul class="navigation__languages">
+          <li><button type="button" class="navigation__lang-item navigation__lang-item--active">RU</button></li>
+          <li><button type="button" class="navigation__lang-item">EN</button></li>
+          <li><button type="button" class="navigation__lang-item">CH</button></li>
+        </ul>
+      </section>
+    </section>
+  </div>
+  </div> 
   <main>
 <section class="service">
   <section class="service__container">
 <h1 class="service__title">Услуги и сервисы</h1>
 <ul class="service__actions">
-  <li><button type="button" class="service__repair" value="Оставить заявку"><img src="./SVG/icon-repair.svg" alt="Логотип кнопки заказа ремнота"></button></li>
-  <li><button type="button" class="service__checkstatus" value="Статус ремонта"><img src="./SVG/icon-checkstatus.svg" alt="Логотип кнопки Статус ремонта"></button></li>
+  <li><button type="button" class="service__repair icon__back" value="Оставить заявку"><img src="./SVG/icon-repair.svg" alt="Логотип кнопки заказа ремнота"></button></li>
+  <li><button type="button" class="service__checkstatus icon__back" value="Статус ремонта"><img src="./SVG/icon-checkstatus.svg" alt="Логотип кнопки Статус ремонта"></button></li>
 </ul>
 </section>
 <nav class="service__navigation">
