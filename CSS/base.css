@@ -733,7 +733,8 @@ display: none;
 
 .service {
   padding: 24px;
-  /* min-width: 1120px; */
+  width: 100%;
+  max-width: 1120px;
   min-height: 535px;
   margin-left: 320px;
 }
