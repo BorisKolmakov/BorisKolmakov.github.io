@@ -1,114 +1,261 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="./CSS/base.css">
   <title>maket</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="../kata/JS/script.js"></script> -->
 </head>
+
 <body>
   <div class="wrapper">
-  <header class="header">
-    <button type="button" class="header__burger icon__back">
-      <img src="./SVG/icon_burger.svg" alt="Логотип бургер">
-    </button>
-    <a class="header__logo"><img src="./SVG/Group.svg" alt="Логотип компании CPS"></a>
-    <ul class="header__actions">
-        <li class="header__action-item"><button type="button" class="header__call icon__back"><img src="./SVG/icon-call.svg" alt="Логотип кнопки звонок"></button></li>
-        <li class="header__action-item"><button type="button" class="header__chat icon__back"><img src="./SVG/icon-chat.svg" alt="Логотп кнопки Обратная связь"></button></li>
-        <li class="header__action-item"><button type="button" class="header__profile icon__back"><img src="./SVG/icon-profile.svg" alt="Логотип кнопки Личный кабинет"></button></li>
-        <li class="header__action-item"><div class="header__divider"></div></li>
-        <li class="header__action-item"><button type="button" class="header__repair icon__back"><img src="./SVG/icon-repair.svg" alt="Логотип кнопки заказа ремнота"></button></li>
-        <li class="header__action-item"><button type="button" class="header__checkstatus icon__back"><img src="./SVG/icon-checkstatus.svg" alt="Логотип кнопки Статус ремонта"></button></li>
-    </ul>
-  </header>
-  <div class="aside-menu__wrapper">
-    <div class="aside-menu__overlay"></div>
-  <aside class="aside-menu">
-    <div class="aside-menu__header">
-      <button type="button" class="aside-menu__burger open icon__back">
-        <img src="./SVG/icon-close.svg" alt="Логотип бургер">
+    <header class="header">
+      <button type="button" class="header__burger icon__back">
+        <img src="./SVG/icon_burger.svg" alt="Логотип бургер">
       </button>
-      <a class="aside-menu__logo"><img src="./SVG/Group.svg" alt="Логотип компании CPS"></a>
-      <button type="button" class="aside-menu__search icon__back">
-        <img src="./SVG/icon-search.svg" alt="Логотип бургер">
-      </button>
-    </div>
-    <section class="aside-menu__body">
-      <ul class="aside-menu__list">
-        <li class="aside-menu__item"><a href="" class="aside-menu__link">Ремонт техники</a></li>
-        <li class="aside-menu__item"><a href="" class="aside-menu__link aside-menu__link--active">Услуги и сервисы</a></li>
-        <li class="aside-menu__item"><a href="" class="aside-menu__link">Корпоративным клиентам</a></li>
-        <li class="aside-menu__item"><a href="" class="aside-menu__link">Продавцам техники</a></li>
-        <li class="aside-menu__item"><a href="" class="aside-menu__link">Партнерам</a></li>
-        <li class="aside-menu__item"><a href="" class="aside-menu__link">Производителям</a></li>
-        <li class="aside-menu__item"><a href="" class="aside-menu__link">Наши сервисные центры</a></li>
-        <li class="aside-menu__item"><a href="" class="aside-menu__link">Контакты</a></li>
+      <a class="header__logo"><img src="./SVG/Group.svg" alt="Логотип компании CPS"></a>
+      <ul class="header__actions">
+        <li class="header__action-item"><button type="button" class="header__call icon__back"><img
+              src="./SVG/icon-call.svg" alt="Логотип кнопки звонок"></button></li>
+        <li class="header__action-item"><button type="button" class="header__chat icon__back"><img
+              src="./SVG/icon-chat.svg" alt="Логотп кнопки Обратная связь"></button></li>
+        <li class="header__action-item"><button type="button" class="header__profile icon__back"><img
+              src="./SVG/icon-profile.svg" alt="Логотип кнопки Личный кабинет"></button></li>
+        <li class="header__action-item">
+          <div class="header__divider"></div>
+        </li>
+        <li class="header__action-item"><button type="button" class="header__repair icon__back"><img
+              src="./SVG/icon-repair.svg" alt="Логотип кнопки заказа ремнота"></button></li>
+        <li class="header__action-item"><button type="button" class="header__checkstatus icon__back"><img
+              src="./SVG/icon-checkstatus.svg" alt="Логотип кнопки Статус ремонта"></button></li>
       </ul>
-      <section class="aside-menu__info">
-        <ul class="aside-menu__actions">
-          <li class="aside-menu__action-item"><button type="button" class="aside-menu__call icon__back"><img src="./SVG/icon-call.svg" alt="Логотип кнопки звонок"></button></li>
-        <li class="aside-menu__action-item"><button type="button" class="aside-menu__chat icon__back"><img src="./SVG/icon-chat.svg" alt="Логотп кнопки Обратная связь"></button></li>
-        <li class="aside-menu__action-item"><button type="button" class="aside-menu__profile icon__back"><img src="./SVG/icon-profile.svg" alt="Логотип кнопки Личный кабинет"></button></li>
-        </ul>
-        <div class="aside-menu__contacts">
-          <a class="aside-menu__mail" href="malto:mail@cps.com">mail@cps.com</a>
-          <a class="aside-menu__phone-number" href="tel:8 800 890 8900">8 800 890 8900</a>
+    </header>
+    <div class="aside-menu__wrapper">
+      <div class="aside-menu__overlay"></div>
+      <aside class="aside-menu">
+        <div class="aside-menu__header">
+          <button type="button" class="aside-menu__burger open icon__back">
+            <img src="./SVG/icon-close.svg" alt="Логотип бургер">
+          </button>
+          <a class="aside-menu__logo"><img src="./SVG/Group.svg" alt="Логотип компании CPS"></a>
+          <button type="button" class="aside-menu__search icon__back">
+            <img src="./SVG/icon-search.svg" alt="Логотип бургер">
+          </button>
         </div>
-        <div class="aside-menu__languages">
-          <input type="radio" class="aside-menu__lang_RU" id="aside-menu__lang_RU">
-          <label class="aside-menu__label_RU aside-menu__label_RU--active" for="aside-menu__lang_RU">RU</label>
-          <input type="radio" class="aside-menu__lang_ENG" id="aside-menu__lang_ENG">
-          <label class="aside-menu__label_ENG" for="aside-menu__lang_ENG">ENG</label>
-          <input type="radio" class="aside-menu__lang_CH" id="aside-menu__lang_CH">
-          <label class="aside-menu__label_CH" for="aside-menu__lang_CH">CH</label>
-        </div>
+        <section class="aside-menu__body">
+          <ul class="aside-menu__list">
+            <li class="aside-menu__item"><a href="" class="aside-menu__link">Ремонт техники</a></li>
+            <li class="aside-menu__item"><a href="" class="aside-menu__link aside-menu__link--active">Услуги и
+                сервисы</a></li>
+            <li class="aside-menu__item"><a href="" class="aside-menu__link">Корпоративным клиентам</a></li>
+            <li class="aside-menu__item"><a href="" class="aside-menu__link">Продавцам техники</a></li>
+            <li class="aside-menu__item"><a href="" class="aside-menu__link">Партнерам</a></li>
+            <li class="aside-menu__item"><a href="" class="aside-menu__link">Производителям</a></li>
+            <li class="aside-menu__item"><a href="" class="aside-menu__link">Наши сервисные центры</a></li>
+            <li class="aside-menu__item"><a href="" class="aside-menu__link">Контакты</a></li>
+          </ul>
+          <section class="aside-menu__info">
+            <ul class="aside-menu__actions">
+              <li class="aside-menu__action-item"><button type="button" class="aside-menu__call icon__back"><img
+                    src="./SVG/icon-call.svg" alt="Логотип кнопки звонок"></button></li>
+              <li class="aside-menu__action-item"><button type="button" class="aside-menu__chat icon__back"><img
+                    src="./SVG/icon-chat.svg" alt="Логотп кнопки Обратная связь"></button></li>
+              <li class="aside-menu__action-item"><button type="button" class="aside-menu__profile icon__back"><img
+                    src="./SVG/icon-profile.svg" alt="Логотип кнопки Личный кабинет"></button></li>
+            </ul>
+            <div class="aside-menu__contacts">
+              <a class="aside-menu__mail" href="malto:mail@cps.com">mail@cps.com</a>
+              <a class="aside-menu__phone-number" href="tel:8 800 890 8900">8 800 890 8900</a>
+            </div>
+            <div class="aside-menu__languages">
+              <input type="radio" class="aside-menu__lang_RU" id="aside-menu__lang_RU">
+              <label class="aside-menu__label_RU aside-menu__label_RU--active" for="aside-menu__lang_RU">RU</label>
+              <input type="radio" class="aside-menu__lang_ENG" id="aside-menu__lang_ENG">
+              <label class="aside-menu__label_ENG" for="aside-menu__lang_ENG">ENG</label>
+              <input type="radio" class="aside-menu__lang_CH" id="aside-menu__lang_CH">
+              <label class="aside-menu__label_CH" for="aside-menu__lang_CH">CH</label>
+            </div>
+          </section>
+        </section>
+      </aside>
+    </div>
+    <main>
+      <section class="service">
+        <section class="service__container">
+          <h1 class="service__title">Услуги и сервисы</h1>
+          <ul class="service__actions">
+            <li><button type="button" class="service__repair icon__back" value="Оставить заявку"><img
+                  src="./SVG/icon-repair.svg" alt="Логотип кнопки заказа ремнота"></button></li>
+            <li><button type="button" class="service__checkstatus icon__back" value="Статус ремонта"><img
+                  src="./SVG/icon-checkstatus.svg" alt="Логотип кнопки Статус ремонта"></button></li>
+          </ul>
+        </section>
+        <nav class="service__navigation">
+          <ul class="service__list">
+            <li><a class="service__link service__link--active" href="#">Ремонтируемые устройства</a></li>
+            <li><a class="service__link" href="#">Дополнительные услуги</a></li>
+            <li><a class="service__link" href="#">Цены на услуги</a></li>
+            <li><a class="service__link" href="#">Адреса сервисных центров</a></li>
+            <li><a class="service__link" href="#">Специальные цены</a></li>
+          </ul>
+          <a class="service__reviews" href="#">Отзывы</a>
+        </nav>
+
+        <section class="service__info">
+          <section class="service__text">
+            <div class="service__paragraph">
+              <p>
+                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+              </p>
+              <p>
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                очередь, советуют нас родным и близким.
+              </p>
+            </div>
+
+            <button type="button" class="service__more" value="Читать далее">Читать далее</button>
+          </section>
+          <img class="service__image" src="./assets/images/logo.jpg" alt="Фотография логотипа компании CPS">
+        </section>
+        <section class="service-devices">
+          <h1 class="service-devices__title">Ремонт техники различных брендов</h1>
+          <div class="service-devices__swiper swiper">
+            <div class="service-devices__swiper-wrapper swiper-wrapper">
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-Lenovo.png" alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-Samsung.png" alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-Apple.png" alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-ViewSonic.png"
+                  alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-Bosch.png" alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-HP.png" alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-Acer.png" alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-Sony.png" alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-Lenovo.png" alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-Samsung.png" alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+              <div class="service-devices__slide swiper-slide">
+                <img class="service-devices__image" src="../kata/assets/images/image-Apple.png" alt="Логотип_Леново">
+                <button class="service-devices__next"><img class="service-devices__next-image"
+                    src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+              </div>
+            </div>
+            <div class="service-devices__pagination swiper-pagination"></div>
+          </div>
+          <div class="service-devices__blocks">
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-Lenovo.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-Samsung.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-Apple.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-ViewSonic.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-Bosch.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-HP.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-Acer.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-Sony.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-Lenovo.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-Samsung.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+            <div class="service-devices__block">
+              <img class="service-devices__image" src="../kata/assets/images/image-Apple.png" alt="Логотип_Леново">
+              <button class="service-devices__next"><img class="service-devices__next-image"
+                  src="../kata/SVG/dropdown.svg" alt="Далее"></button>
+            </div>
+          </div>
+          <button type="button" class="service-devices__more" value="Показать все">Показать все</button>
+        </section>
       </section>
-    </section>
-  </aside>
-  </div> 
-  <main>
-<section class="service">
-  <section class="service__container">
-<h1 class="service__title">Услуги и сервисы</h1>
-<ul class="service__actions">
-  <li><button type="button" class="service__repair icon__back" value="Оставить заявку"><img src="./SVG/icon-repair.svg" alt="Логотип кнопки заказа ремнота"></button></li>
-  <li><button type="button" class="service__checkstatus icon__back" value="Статус ремонта"><img src="./SVG/icon-checkstatus.svg" alt="Логотип кнопки Статус ремонта"></button></li>
-</ul>
-</section>
-<nav class="service__navigation">
-    <ul class="service__list">
-      <li><a class="service__link service__link--active" href="#">Ремонтируемые устройства</a></li>
-      <li><a class="service__link" href="#">Дополнительные услуги</a></li>
-      <li><a class="service__link" href="#">Цены на услуги</a></li>
-      <li><a class="service__link" href="#">Адреса сервисных центров</a></li>
-      <li><a class="service__link" href="#">Специальные цены</a></li>
-    </ul>
-     <a class="service__reviews"  href="#">Отзывы</a> 
- </nav>
-
-<section class="service__info">
-  <section class="service__text">
-   <div class="service__paragraph">
-<p>
-  Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-</p>
-<p>
-  Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
-</p>
-</div>
-
-<button type="button"  class="service__more" value="Читать далее">Читать далее</button>
-</section>
-<img class="service__image" src="./assets/images/logo.jpg" alt="Фотография логотипа компании CPS">
-</section>
-</section>
-  </main>
-</div>
-
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="../kata/JS/script.js"></script>
 </body>
 
 </html>
