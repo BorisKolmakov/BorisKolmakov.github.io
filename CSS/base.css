@@ -109,6 +109,7 @@ bottom: 86.23%;
   left: 0;
   z-index: 200;
   margin: 0 auto;
+  transition: 0.7s;
  } 
 
 .aside-menu__overlay {
@@ -412,8 +413,15 @@ color: #FF3E79;
     min-width: 288px;
     max-width: 490px;
     margin-bottom: 16px;
-    max-height: 155px;
+    max-height: 150px;
+    transition: 0.7s;
    }
+
+  .service__paragraph--open {
+    max-height: 400px;
+    transition: 0.7s;
+  }
+
 
    .service__more {
     cursor: pointer;
@@ -433,6 +441,9 @@ color: #FF3E79;
   content: url(../SVG/icon-more.svg);
 }
 
+.service__more--open::before {
+transform: rotate(180deg);
+} 
 .service__list { 
   min-height: 60px;
   padding-left: 0;
@@ -478,6 +489,7 @@ color: #FF3E79;
     flex-direction: column;
     gap: 24px;
     margin: 0;
+    margin-top: 16px;
   }
 
   .service-devices__title {
@@ -646,7 +658,16 @@ color: #FF3E79;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    transition: 0.7s;
+  }
+
+  .service-devices__blocks--open {
+    min-height: 250px;
+    max-height: 550px;
+    height: auto;
+    transition: 0.7s;
+    padding-bottom: 16px;
   }
 
   .service-devices__more {
@@ -666,6 +687,14 @@ color: #FF3E79;
   position: absolute;
   margin-left: -20px;
   content: url(../SVG/icon-more.svg);
+  transform: rotate(0deg);
+}
+
+.service-devices__more--open::before {
+  position: absolute;
+  margin-left: -20px;
+  content: url(../SVG/icon-more.svg);
+  transform: rotate(180deg);
 }
 
 .swiper {
