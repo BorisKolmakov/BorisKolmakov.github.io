@@ -109,8 +109,11 @@ bottom: 86.23%;
   left: 0;
   z-index: 200;
   margin: 0 auto;
-  transition: 0.7s;
  } 
+
+.aside-menu__wrapper--show{
+  display: block;
+}
 
 .aside-menu__overlay {
   position: absolute;

@@ -68,12 +68,13 @@ serviceMore.onclick = function() {
 
 const headerBurger = document.querySelector('.header__burger');
 const asideMenuBurger = document.querySelector('.aside-menu__burger');
-const asideMenuWrap = document.getElementsByClassName('aside-menu__wrapper');
+const asideMenuWrap = document.querySelector('.aside-menu__wrapper');
 
-headerBurger.onclick = function() {
-  asideMenuWrap [0].style.display = 'block';
-};
+headerBurger.addEventListener('click', function () {
+  asideMenuWrap.classList.add('aside-menu__wrapper--show');
+});
 
-asideMenuBurger.onclick = function() {
-  asideMenuWrap [0].style.display = 'none';
-};
+asideMenuBurger.addEventListener('click', function () {
+  asideMenuWrap.classList.remove('aside-menu__wrapper--show');
+});
+
