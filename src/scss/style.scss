@@ -1,17 +1,47 @@
-$bgColor: #24292e;
-$text: #fff;
+@import 'fonts.scss';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+$bgColor: #fff;
+$text: #1b1c21;
+$color: #24292e;
+$border: #41f6d7;
+$button: #ff3e79;
+$title: #7e7e82;
+$service: #f8f8f8;
+$divider: #eaeaea;
+$box-shadow-1: rgba(69, 79, 126, 0.02);
+$box-shadow-2: rgba(14, 24, 80, 0.2);
+$more: rgba(0, 0, 0, 0);
 
 body {
-  padding: 1rem;
+  font-family: 'TT Lakes Regular';
   margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.icon__back {
+  cursor: pointer;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 20px;
+  border: 0;
+  background: $button;
+}
+
+.icon__back:hover {
+  opacity: 0.3;
+}
+
+.service-more__text {
+  font-family: 'TT Lakes Regular';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+
   color: $text;
 }

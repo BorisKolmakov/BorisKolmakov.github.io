@@ -1,0 +1,143 @@
+@import 'fonts.scss';
+
+$bgColor: #fff;
+$text: #1b1c21;
+$color: #24292e;
+$border: #41f6d7;
+$button: #ff3e79;
+$title: #7e7e82;
+$service: #f8f8f8;
+$divider: #eaeaea;
+$more: rgba(0, 0, 0, 0);
+
+.service-devices {
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  margin-top: 16px;
+
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    color: $title;
+    text-transform: uppercase;
+    background-color: $bgColor;
+    padding: 24px;
+    margin-left: -24px;
+    // margin-right: -24px;
+    border-top: 1px solid $border;
+  }
+
+  &__blocks {
+    display: none;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    min-width: 224px;
+    min-height: 72px;
+    background-color: $bgColor;
+    border: 1px solid $divider;
+    border-radius: 6px;
+    margin-top: 16px;
+    margin-left: 24px;
+  }
+
+  &__block:hover {
+    box-shadow: 0 0 10px $title;
+  }
+
+  &__image {
+    margin-left: 16px;
+  }
+
+  &__next {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    min-height: 40px;
+    border: 2px solid $button;
+    border-radius: 50%;
+    margin-right: 16px;
+    background-color: $bgColor;
+  }
+
+  &__next:hover {
+    box-shadow: 0 0 10px $title;
+  }
+
+  &__more {
+    display: none;
+  }
+
+  &__more:hover {
+    text-shadow: 0 0 10px $title;
+    color: $button;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service-devices {
+    &__title {
+      margin-right: -24px;
+    }
+
+    &__swiper {
+      display: none;
+    }
+
+    &__blocks {
+      max-height: 190px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      transition: 0.7s;
+    }
+
+    &__blocks--open {
+      min-height: 250px;
+      max-height: 550px;
+      height: auto;
+      transition: 0.7s;
+      padding-bottom: 16px;
+    }
+
+    &__more {
+      cursor: pointer;
+      display: inline-block;
+      max-width: 120px;
+      font-size: 16px;
+      padding: 5px;
+      margin-left: 32px;
+      border: none;
+      border-color: $more;
+      background-color: $more;
+      color: $text;
+    }
+
+    &__more::before {
+      position: absolute;
+      margin-left: -20px;
+      content: url(../img/icon-more.svg);
+      transform: rotate(0deg);
+    }
+
+    &__more--open::before {
+      position: absolute;
+      margin-left: -20px;
+      content: url(../img/icon-more.svg);
+      transform: rotate(180deg);
+    }
+  }
+}

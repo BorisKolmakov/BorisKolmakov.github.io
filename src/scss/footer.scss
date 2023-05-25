@@ -1,0 +1,57 @@
+@import 'fonts.scss';
+
+$bgColor: #fff;
+$text: #1b1c21;
+$color: #24292e;
+$border: #41f6d7;
+$button: #ff3e79;
+$title: #7e7e82;
+$service: #f8f8f8;
+$box-shadow-1: rgba(69, 79, 126, 0.02);
+$box-shadow-2: rgba(14, 24, 80, 0.2);
+
+.footer {
+  // box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 105px;
+  max-height: 147px;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  background-color: $service;
+  border-top: 1px solid $border;
+  color: $title;
+
+  &__privacy-policy {
+    text-decoration: none;
+    color: $title;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0px 24px;
+    &__information {
+      text-align: right;
+      max-width: 320px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    // padding: 0px 24px;
+    width: 100%;
+    max-width: 1120px;
+    margin-left: 320px;
+  }
+}

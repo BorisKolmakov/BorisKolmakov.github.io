@@ -1,0 +1,245 @@
+@import 'fonts.scss';
+
+$bgColor: #fff;
+$text: #1b1c21;
+$color: #24292e;
+$border: #41f6d7;
+$button: #ff3e79;
+$title: #7e7e82;
+$service: #f8f8f8;
+$divider: #eaeaea;
+$more: rgba(0, 0, 0, 0);
+
+.service {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  background-color: $service;
+
+  &__title {
+    font-family: 'TT Lakes Bold';
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    text-align: left;
+    border-left: 4px solid $border;
+    padding-left: 12px;
+    margin-left: -16px;
+  }
+
+  &__actions {
+    display: none;
+    list-style-type: none;
+  }
+
+  &__repair {
+    cursor: pointer;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 20px;
+    border: 0;
+  }
+
+  &__repair::before {
+    position: absolute;
+    margin-left: -140px;
+    content: 'Оставить заявку';
+  }
+
+  &__repair::before:hover {
+    color: $button;
+  }
+
+  &__checkstatus {
+    cursor: pointer;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 20px;
+    border: 0;
+  }
+
+  &__checkstatus::before {
+    position: absolute;
+    margin-left: -140px;
+    content: 'Статус ремонта';
+  }
+
+  &__image {
+    min-width: 320px;
+    margin-left: -16px;
+  }
+
+  &__info {
+    min-width: 304px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    min-width: 304px;
+    margin-bottom: 20px;
+  }
+
+  &__paragraph {
+    overflow-y: hidden;
+    min-width: 288px;
+    max-width: 490px;
+    margin-bottom: 16px;
+    max-height: 150px;
+    transition: 0.7s;
+  }
+
+  &__paragraph--open {
+    max-height: 400px;
+    transition: 0.7s;
+  }
+
+  &__more {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 32px;
+    border: none;
+    border-color: $more;
+    background-color: $more;
+    color: $text;
+  }
+
+  &__more:hover {
+    text-shadow: 0 0 10px $title;
+    color: $button;
+  }
+
+  &__more::before {
+    position: absolute;
+    margin-left: -20px;
+    content: url(../img/icon-more.svg);
+  }
+
+  &__more--open::before {
+    transform: rotate(180deg);
+  }
+
+  &__list {
+    min-height: 60px;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    gap: 10px;
+  }
+
+  &__list::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__link {
+    color: $title;
+    white-space: nowrap;
+    text-decoration: none;
+    background: $service;
+    border: 2px solid $service;
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+
+  &__link--active {
+    background: $bgColor;
+    border: 2px solid $border;
+  }
+
+  &__reviews {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service {
+    padding: 24px;
+
+    &__title {
+      padding-left: 20px !important;
+      margin-left: -24px !important;
+    }
+
+    &__info {
+      flex-wrap: nowrap;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 360px;
+      margin: 0;
+    }
+
+    &__text {
+      min-width: 312px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .service {
+    padding: 24px;
+    width: 100%;
+    max-width: 1120px;
+    min-height: 535px;
+    margin-left: 320px;
+
+    &__actions {
+      margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 140px;
+    }
+
+    &__container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__reviews {
+      display: block;
+      text-decoration: none;
+      margin-left: 32px;
+      color: $title;
+    }
+
+    &__list {
+      overflow: hidden;
+    }
+
+    &__text {
+      min-width: 490px;
+    }
+
+    &__image {
+      max-width: 531px;
+      max-height: 307px;
+      margin: 0;
+    }
+
+    &__info {
+      min-width: 1120px;
+    }
+  }
+}
