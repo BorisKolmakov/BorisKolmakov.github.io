@@ -1,0 +1,122 @@
+@import 'fonts.scss', 'color.scss';
+
+.service-devices {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  margin-top: 16px;
+
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    color: $title;
+    text-transform: uppercase;
+    background-color: $bgColor;
+    padding: 24px;
+    margin-left: -24px;
+    border-top: 1px solid $border;
+  }
+
+  &__buttons {
+    display: none;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    min-width: 224px;
+    min-height: 72px;
+    max-height: 72px;
+    padding: 14px;
+    background-color: $bgColor;
+    border: 1px solid $divider;
+    border-radius: 6px;
+  }
+
+  &__button:hover {
+    box-shadow: 0 0 10px $title;
+  }
+
+  &__more {
+    display: none;
+  }
+
+  &__more:hover {
+    text-shadow: 0 0 10px $title;
+    color: $button;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service-devices {
+    &__title {
+      margin-right: -24px;
+    }
+
+    &__swiper {
+      display: none;
+    }
+
+    &__buttons {
+      max-height: 170px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 16px;
+      padding-top: 16px;
+      padding-left: 16px;
+      transition: 0.7s;
+    }
+
+    &__buttons--open {
+      min-height: 250px;
+      max-height: 550px;
+      height: auto;
+      transition: 0.7s;
+      padding-bottom: 16px;
+    }
+
+    &__more {
+      cursor: pointer;
+      display: inline-block;
+      max-width: 120px;
+      font-size: 16px;
+      padding: 5px;
+      margin-left: 32px;
+      border: none;
+      border-color: $more;
+      background-color: $more;
+      color: $text;
+    }
+
+    &__more::before {
+      position: absolute;
+      margin-left: -20px;
+      content: url(../img/icon-more.svg);
+      transform: rotate(0deg);
+    }
+
+    &__more--open::before {
+      position: absolute;
+      margin-left: -20px;
+      content: url(../img/icon-more.svg);
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .service-devices {
+    &__button {
+      min-width: 240px;
+    }
+  }
+}

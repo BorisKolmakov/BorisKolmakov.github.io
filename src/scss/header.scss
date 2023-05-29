@@ -1,0 +1,96 @@
+@import 'fonts.scss', 'color.scss';
+
+.header {
+  margin: 0;
+  width: 100%;
+  min-height: 87px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: $bgColor;
+  border-bottom: 1px solid $border;
+
+  &__burger {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  &__logo {
+    cursor: pointer;
+    top: 3.69%;
+    bottom: 86.23%;
+  }
+
+  &__actions {
+    list-style-type: none;
+    margin-left: auto;
+    padding: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__divider {
+    cursor: pointer;
+    min-width: 2px;
+    min-height: 32px;
+    background: $divider;
+    border-radius: 1px;
+    border: 0;
+  }
+
+  &__checkstatus {
+    margin-right: 16px;
+  }
+
+  &__actions li:nth-child(1) {
+    display: none;
+  }
+
+  &__actions li:nth-child(2) {
+    display: none;
+  }
+
+  &__actions li:nth-child(3) {
+    display: none;
+  }
+}
+
+/********************************************768px******************************/
+@media screen and (min-width: 768px) {
+  .header {
+    width: 100%;
+    &__actions li:nth-child(1) {
+      display: block;
+    }
+    &__actions li:nth-child(2) {
+      display: block;
+    }
+    &__actions li:nth-child(3) {
+      display: block;
+    }
+    &__burger {
+      margin-left: 24px;
+      margin-right: 47px;
+    }
+    &__burger::after {
+      display: inline-block;
+      position: absolute;
+      margin-left: 30px;
+      margin-top: -5px;
+      content: url(../img/icon-divider.svg);
+    }
+    &__checkstatus {
+      margin-right: 40px;
+    }
+  }
+}
+
+/*******************************************1440px******************************/
+@media screen and (min-width: 1440px) {
+  .header {
+    display: none;
+  }
+}
